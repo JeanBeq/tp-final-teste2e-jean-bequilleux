@@ -24,7 +24,7 @@ const operations: OperationObject = {
 };
 
 function App() {
-  
+
   const handleClear = useCallback(() => {
     updateCurrent(0);
     updateChiffre(0);
@@ -103,7 +103,7 @@ function App() {
         >
           =
         </button>
-        <button onClick={handleClear}>C</button>
+        <button className="btnReset" onClick={handleClear}>C</button>
       </header>
     </div>
   );
