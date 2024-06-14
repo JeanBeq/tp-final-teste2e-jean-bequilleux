@@ -100,9 +100,9 @@ test('test dentrée de nombres longs', async ({ page }) => {
 });
 
 test('test du bouton de réinitialisation', async ({ page }) => {
-  await page.click('button[id="3"]');
+  await page.click('button[id="1"]');
   const result1 = await page.locator('.screen').innerText();
-  expect(result1).toContain('5');
+  expect(result1).toContain('1');
   await page.click('.btnReset');
   const result2 = await page.locator('.screen').innerText();
   expect(result2).toBe('0');
