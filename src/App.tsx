@@ -24,6 +24,13 @@ const operations: OperationObject = {
 };
 
 function App() {
+  
+  const handleClear = useCallback(() => {
+    updateCurrent(0);
+    updateChiffre(0);
+    updateOp(undefined);
+  }, []);
+
   const [currentValue, updateCurrent] = useState<number | undefined>(undefined);
   const [chiffre, updateChiffre] = useState<number | undefined>(undefined);
   const [operation, updateOp] = useState<Operation | undefined>(undefined);
@@ -52,7 +59,8 @@ function App() {
         updateCurrent(myNum)
       }
     }
-  }, [currentValue, operation, chiffre])
+  }, 
+  [currentValue, operation, chiffre])
 
   return (
     <div className="App">
@@ -95,6 +103,7 @@ function App() {
         >
           =
         </button>
+        <button onClick={handleClear}>C</button>
       </header>
     </div>
   );
