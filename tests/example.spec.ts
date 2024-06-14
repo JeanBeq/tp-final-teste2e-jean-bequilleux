@@ -4,6 +4,60 @@ test.beforeEach(async ({ page }) => {
   await page.goto('http://localhost:5173/');
 });
 
+test('test daffichage de nombre 1', async ({ page }) => {
+  await page.click('button[id="1"]');
+  const result = await page.locator('.screen').innerText();
+  expect(result).toContain('1');
+});
+
+test('test daffichage de nombre 2', async ({ page }) => {
+  await page.click('button[id="2"]');
+  const result = await page.locator('.screen').innerText();
+  expect(result).toContain('2');
+});
+
+test('test daffichage de nombre 3', async ({ page }) => {
+  await page.click('button[id="3"]');
+  const result = await page.locator('.screen').innerText();
+  expect(result).toContain('3');
+});
+
+test('test daffichage de nombre 4', async ({ page }) => {
+  await page.click('button[id="4"]');
+  const result = await page.locator('.screen').innerText();
+  expect(result).toContain('4');
+});
+
+test('test daffichage de nombre 5', async ({ page }) => {
+  await page.click('button[id="5"]');
+  const result = await page.locator('.screen').innerText();
+  expect(result).toContain('3');
+});
+
+test('test daffichage de nombre 6', async ({ page }) => {
+  await page.click('button[id="6"]');
+  const result = await page.locator('.screen').innerText();
+  expect(result).toContain('6');
+});
+
+test('test daffichage de nombre 7', async ({ page }) => {
+  await page.click('button[id="7"]');
+  const result = await page.locator('.screen').innerText();
+  expect(result).toContain('7');
+});
+
+test('test daffichage de nombre 8', async ({ page }) => {
+  await page.click('button[id="8"]');
+  const result = await page.locator('.screen').innerText();
+  expect(result).toContain('8');
+});
+
+test('test daffichage de nombre 9', async ({ page }) => {
+  await page.click('button[id="9"]');
+  const result = await page.locator('.screen').innerText();
+  expect(result).toContain('9');
+});
+
 test('test daddition', async ({ page }) => {
   await page.click('button[id="1"]');
   await page.click('button:has-text("sum")');
